@@ -2,7 +2,7 @@
 <package format="2">
   <name>motor_to_protocol</name>
   <version>0.0.0</version>
-  <description></description>
+  <description>Convert controller_msgs::MotorSignal to protocol_msgs::Packet</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
