@@ -20,7 +20,7 @@ void twistReceived(const controller_msgs::MotorSignal::ConstPtr &motorSignal)
     unsigned char motor1Speed = (unsigned char)abs(round(motorSignal->leftMotor * 255.0f));
     unsigned char motor2Speed = (unsigned char)abs(round(motorSignal->rightMotor * 255.0f));
 
-    packet.data.push_back(command & (motor1IsReversed << 7) & (motor2IsReversed << 6));
+    packet.data.push_back(command | (motor1IsReversed << 7) | (motor2IsReversed << 6));
     packet.data.push_back(motor1Speed);
     packet.data.push_back(motor2Speed);
 
